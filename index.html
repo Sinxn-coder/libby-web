@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libby - Premium Editorial Library</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Libby Logo" style="height: 32px; margin-right: 12px; vertical-align: middle; border-radius: 6px;">
+            LIBBY
+        </div>
+        <div class="nav-links">
+            <a href="#features">Experience</a>
+            <a href="#philosophy">Philosophy</a>
+            <a href="#download" class="cta-nav">Get the App</a>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero">
+        <div class="hero-content" data-aos="page-flip">
+            <span class="section-label">Editorial Excellence</span>
+            <h1 class="gradient-text">Your Library, Reimagined.</h1>
+            <p class="subtitle">Step into a world where reading meets premium design. Libby is more than an app; it's a sanctuary for your curated collection.</p>
+            <div id="download-container" class="download-section">
+                <!-- Selectively injected via JS -->
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2000&auto=format&fit=crop" alt="Libby Hero" class="hero-img">
+        </div>
+    </header>
+
+    <section id="features" class="section-header">
+        <span class="section-label">Features</span>
+        <h2 class="section-title">Crafted for Connoisseurs.</h2>
+    </section>
+
+    <section class="features-grid">
+        <div class="feature-card" data-aos="fade-up">
+            <span class="icon">✨</span>
+            <h3>Glow Design System</h3>
+            <p>Experience our signature "Glow" interface—soft light, premium shadows, and focus-driven layouts that soothe your eyes.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <span class="icon">📑</span>
+            <h3>Editorial Layouts</h3>
+            <p>Books aren't just data points. We display your library with a bold, editorial aesthetic that respects the art of the cover.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <span class="icon">🔒</span>
+            <h3>Secure Governance</h3>
+            <p>Built-in user status monitoring and account verification ensure a secure environment for your digital assets.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+            <span class="icon">📊</span>
+            <h3>Admin Mastery</h3>
+            <p>A powerful desktop command center to manage categories, users, and borrowing history with surgical precision.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <span class="icon">🔔</span>
+            <h3>Instant Resonance</h3>
+            <p>Real-time notifications keep you connected to your library's rhythm, from new arrivals to status updates.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <span class="icon">🌓</span>
+            <h3>Luminescent Flux</h3>
+            <p>A dark mode that feels alive. Deep slates and vibrant greens create a luminescent experience for night-time curation.</p>
+        </div>
+    </section>
+
+    <section id="philosophy" class="info-section">
+        <div class="info-content" data-aos="fade-right">
+            <span class="section-label">The Vision</span>
+            <h2>Books are not just files. They are legacies.</h2>
+            <p>We built Libby on the belief that a digital library should feel as permanent and premium as a physical one. Every interaction is designed to evoke the feeling of stepping into a private gallery.</p>
+            <div class="stat-group">
+                <div class="stat-item">
+                    <h4>60FPS</h4>
+                    <span>Fluid Interactivity</span>
+                </div>
+                <div class="stat-item">
+                    <h4>100%</h4>
+                    <span>Native Performance</span>
+                </div>
+            </div>
+        </div>
+        <div class="info-visual" data-aos="zoom-out">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop" alt="Philosophy" class="info-img">
+        </div>
+    </section>
+
+    <section class="info-section reverse">
+        <div class="info-content" data-aos="fade-left">
+            <span class="section-label">Technology</span>
+            <h2>Cloud Power, Local Privacy.</h2>
+            <p>Powered by Supabase and Flutter, Libby offers industry-leading synchronization speeds while keeping your session management strictly professional with local encryption.</p>
+            <div class="stat-group">
+                <div class="stat-item">
+                    <h4>< 20ms</h4>
+                    <span>Sync Latency</span>
+                </div>
+                <div class="stat-item">
+                    <h4>256-bit</h4>
+                    <span>Session Security</span>
+                </div>
+            </div>
+        </div>
+        <div class="info-visual" data-aos="zoom-out">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop" alt="Technology" class="info-img">
+        </div>
+    </section>
+
+    <section id="download" class="final-cta">
+        <div data-aos="zoom-in">
+            <h2 class="gradient-text">Join the Editorial Circle.</h2>
+            <p>Download the latest version of Libby for your device and transform your library today.</p>
+            <div id="download-container-footer" class="download-section center">
+                <!-- Selectively injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Bottom Tab Bar -->
+    <nav class="mobile-tab-bar">
+        <a href="#hero" class="tab-item active">
+            <span class="tab-icon">🏠</span>
+            <span class="tab-label">Home</span>
+        </a>
+        <a href="#features" class="tab-item">
+            <span class="tab-icon">✨</span>
+            <span class="tab-label">Experience</span>
+        </a>
+        <a href="#philosophy" class="tab-item">
+            <span class="tab-icon">🏛️</span>
+            <span class="tab-label">Philosophy</span>
+        </a>
+        <a href="#download" class="tab-item">
+            <span class="tab-icon">⬇️</span>
+            <span class="tab-label">Download</span>
+        </a>
+    </nav>
+
+    <footer>
+        <div class="logo">LIBBY</div>
+        <p>Premium Library Management & Editorial Experience.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Support</a>
+        </div>
+        <p style="margin-top: 30px; opacity: 0.5; font-size: 0.8rem;">&copy; 2026 Libby Editorial Team. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

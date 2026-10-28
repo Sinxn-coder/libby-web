@@ -1,29 +1,53 @@
-# Libby Privacy Policy Website
+# Libby Marketing & Legal Website
 
-Standalone, lightweight, production-ready website publishing the official Privacy Policy for **Libby** (Kamaliya Campus Central Library system). 
+Production-ready, zero-dependency static website for **Libby** (Kamaliya Campus Central Library system), developed by **Etriq**.
 
-This website satisfies Google Play Store, Apple App Store, and institutional app distribution privacy policy URL requirements.
+This repository serves as the deployment source for Cloudflare Pages at `https://libby.etriq.online` and provides:
+- The main marketing, features, and platform showcase homepage
+- Official administrative desktop software distribution (`/admin-download/`)
+- Institutional Privacy Policy (`/privacy-policy/`)
+- Terms of Service (`/terms-of-service/`)
+- Public Account Deletion Request Portal (`/account-deletion/`)
 
 ---
 
-## 📁 Directory Structure
+## 📁 Repository & Site Structure
+
+The repository root is the deployable root for Cloudflare Pages:
 
 ```text
-hostweb/
-├── assets/
-│   └── logo.png              # Official Libby logo asset
-├── downloads/
-│   ├── Libby.apk             # Android package
-│   └── Libby_Windows.zip     # Windows desktop package
+.
+├── index.html                    # Main Libby landing & interactive showcase page
+├── style.css                     # Primary styles and visual design tokens
+├── script.js                     # Showcase interactions, dynamic demos & animations
+├── policy.css                    # Scoped typography and styling for legal pages
+├── policy.js                     # Smooth scroll & navigation helpers for legal pages
 ├── privacy-policy/
-│   └── index.html            # Primary Privacy Policy route (/privacy-policy/)
-├── index.html                # Libby landing page (links to policy)
-├── policy.css                # Scoped Libby editorial styling & tokens
-├── policy.js                 # Smooth scroll, TOC spy, back-to-top interaction
-├── privacy-policy.html       # Direct fallback route (/privacy-policy.html)
-├── script.js                 # Landing page device detection script
-├── style.css                 # Landing page styles
-└── README.md                 # Deployment & configuration instructions
+│   └── index.html                # Clean URL route (/privacy-policy/)
+├── privacy-policy.html           # File fallback route
+├── terms-of-service/
+│   └── index.html                # Clean URL route (/terms-of-service/)
+├── terms-of-service.html         # File fallback route
+├── account-deletion/
+│   └── index.html                # Clean URL route (/account-deletion/)
+├── account-deletion.html         # File fallback route
+├── admin-download/
+│   └── index.html                # Clean URL route (/admin-download/)
+├── assets/                       # UI illustrations, logos, icons, and mockups
+│   ├── app_icon.png
+│   ├── back.png
+│   ├── etriqlogo.webp
+│   ├── front.png
+│   ├── libby_logo.png
+│   ├── logo.png
+│   ├── maintanence.webp
+│   └── windows_icon.PNG
+├── downloads/
+│   ├── Libby_Admin_Setup_v1.5.0.exe  # Windows release installer (18.35 MB)
+│   ├── Libby.apk                     # Android application package
+│   └── Libby_Windows.zip             # Portable Windows package
+├── CLOUDFLARE_PAGES_SETUP.md     # Step-by-step Cloudflare Pages setup guide
+└── README.md                     # Repository documentation
 ```
 
 ---
@@ -31,62 +55,42 @@ hostweb/
 ## 🎨 Design Tokens & Branding
 
 - **Primary Green:** `#015B3D`
-- **Deep Green:** `#013B2A`
-- **Mint:** `#D9EFE4`
+- **Deep Emerald Base:** `#013B2A`
+- **Accent Mint:** `#34D399` / `#D9EFE4`
+- **Surface Dark:** `#0D1512` / `#16221D`
 - **Warm Ivory:** `#F5F3EB`
-- **Charcoal:** `#242C28`
-- **Typography:** *Newsreader* / *Playfair Display* (Editorial headings) + *Inter* (Legible body copy at 17px with 1.75 line height).
+- **Typography:** *Space Grotesk* (Headings), *Plus Jakarta Sans* (Interface & copy), *Inter* (Legal body).
 
 ---
 
 ## 💻 Local Preview
 
-Run any standard local HTTP server inside the `hostweb` directory:
+Run any standard local HTTP server directly from the repository root:
 
-### Option 1: Python 3 (Recommended)
+### Option 1: Python 3
 ```bash
-cd hostweb
 python -m http.server 8000
 ```
 Then navigate to:
-- Privacy Policy: `http://localhost:8000/privacy-policy/`
-- Direct File Route: `http://localhost:8000/privacy-policy.html`
 - Homepage: `http://localhost:8000/`
+- Admin Download: `http://localhost:8000/admin-download/`
+- Privacy Policy: `http://localhost:8000/privacy-policy/`
+- Terms of Service: `http://localhost:8000/terms-of-service/`
+- Account Deletion: `http://localhost:8000/account-deletion/`
 
 ### Option 2: Node.js (npx serve)
 ```bash
-cd hostweb
 npx serve .
 ```
 
 ---
 
-## 🚀 Recommended Deployment Options
+## 🚀 Cloudflare Pages Configuration
 
-Because this is a completely static, zero-dependency website, it can be hosted permanently with zero cost and high availability.
+This repository is optimized for zero-configuration, zero-build deployment:
 
-### 1. Cloudflare Pages (Recommended for Store URLs)
-1. In Cloudflare Dashboard, go to **Workers & Pages** > **Create application** > **Pages** > **Connect to Git** (or direct upload).
-2. Set **Build output directory** to `hostweb` (no build command needed).
-3. Cloudflare automatically issues a free, managed SSL certificate and global CDN caching.
-4. Your permanent URL will be `https://<project-name>.pages.dev/privacy-policy/`.
-
-### 2. GitHub Pages
-1. Go to repository **Settings** > **Pages**.
-2. Select branch `main` and folder `/hostweb` (or deploy via GitHub Actions).
-3. Your permanent URL will be `https://<username>.github.io/<repo>/privacy-policy/`.
-
-### 3. Netlify
-1. Connect repository or run `npx netlify deploy --dir=hostweb --prod`.
-2. Permanent URL: `https://<site-name>.netlify.app/privacy-policy/`.
-
----
-
-## ⚠️ Pre-Publication Institutional Action Items
-
-Before submitting this URL to app stores or public directories, confirm and replace the bracketed placeholders in `Section 12: Institutional Contact Details`:
-
-1. **Official Library Contact Email:** e.g., `library@kamaliya.edu`
-2. **Campus Physical Address / Room:** e.g., `Central Library Block, Kamaliya Campus`
-3. **Official Library Telephone Number**
-4. **Data Privacy Officer / Institutional Contact Person**
+- **Framework Preset:** `None` / `Static Site`
+- **Build Command:** *(Leave empty)*
+- **Build Output Directory:** `/` (or root `.`)
+- **Production Branch:** `main`
+- **Custom Domain:** `libby.etriq.online`

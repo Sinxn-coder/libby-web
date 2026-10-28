@@ -1,163 +1,1123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libby - Premium Editorial Library</title>
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libby — Your Campus Library, Reimagined</title>
+  <meta name="description" content="Libby modernizes campus library operations with digital book discovery, real-time circulation, digital library cards, and administrative control. Built by Etriq.">
+  <meta name="theme-color" content="#013B2A">
+  <link rel="canonical" href="https://libby.etriq.online/">
+  <meta property="og:title" content="Libby — Your Campus Library, Reimagined">
+  <meta property="og:description" content="A more thoughtful way to discover books, manage borrowing, and connect with your campus library.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://libby.etriq.online/">
+  <meta property="og:image" content="assets/libby_logo.png">
+
+  <!-- Favicon / Web Tab Icon -->
+  <link rel="icon" type="image/png" href="assets/libby_logo.png">
+  <link rel="apple-touch-icon" href="assets/libby_logo.png">
+
+  <!-- Typography: Space Grotesk (Headings) + Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="glass-nav">
-        <div class="logo">
-            <img src="assets/logo.png" alt="Libby Logo" style="height: 32px; margin-right: 12px; vertical-align: middle; border-radius: 6px;">
-            LIBBY
-        </div>
-        <div class="nav-links">
-            <a href="#features">Experience</a>
-            <a href="#philosophy">Philosophy</a>
-            <a href="#download" class="cta-nav">Get the App</a>
-        </div>
-    </nav>
+<body data-theme="dark">
 
-    <header id="hero" class="hero">
-        <div class="hero-content" data-aos="page-flip">
-            <span class="section-label">Editorial Excellence</span>
-            <h1 class="gradient-text">Your Library, Reimagined.</h1>
-            <p class="subtitle">Step into a world where reading meets premium design. Libby is more than an app; it's a sanctuary for your curated collection.</p>
-            <div id="download-container" class="download-section">
-                <!-- Selectively injected via JS -->
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header & Sticky Navigation -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-link" aria-label="Libby Home">
+        <div class="brand-icon-wrap">
+          <img src="assets/libby_logo.png" alt="Libby Logo" class="brand-logo" width="28" height="28">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-name">LIBBY</span>
+          <span class="brand-tagline">BY ETRIQ</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links: Streamlined and Focused -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#overview" class="nav-item">Platform</a></li>
+          <li><a href="#features" class="nav-item">Features</a></li>
+          <li><a href="#showcase" class="nav-item">Preview</a></li>
+          <li><a href="admin-download/" class="nav-item">Admin Desktop</a></li>
+          <li><a href="#faq" class="nav-item">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Hamburger -->
+      <div class="nav-actions">
+        <a href="#custom-software" class="btn btn-outline nav-cta">Get Software Built</a>
+        <button class="hamburger-btn" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="nav-mobile-drawer" id="mobile-nav" hidden>
+      <div class="mobile-nav-inner">
+        <ul class="mobile-links">
+          <li><a href="#overview" class="mobile-item">Platform Overview</a></li>
+          <li><a href="#features" class="mobile-item">Features & Capabilities</a></li>
+          <li><a href="#showcase" class="mobile-item">Interactive Preview</a></li>
+          <li><a href="admin-download/" class="mobile-item">Admin Desktop (.exe)</a></li>
+          <li><a href="#how-it-works" class="mobile-item">How It Works</a></li>
+          <li><a href="#campus" class="mobile-item">For Students & Faculty</a></li>
+          <li><a href="#faq" class="mobile-item">Frequently Asked Questions</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+          <a href="#custom-software" class="btn btn-primary full-width">Discuss Your Project</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-decoration">
+        <div class="glow-orb orb-primary"></div>
+        <div class="glow-orb orb-mint"></div>
+        <div class="subtle-grid-pattern"></div>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="eyebrow-pill" data-reveal="fade-up">
+            <span class="pill-dot"></span>
+            <span class="pill-text">THE LIBRARY, REIMAGINED</span>
+          </div>
+
+          <h1 class="hero-title" data-reveal="fade-up" data-delay="100">
+            Your next chapter <span class="text-highlight">starts here.</span>
+          </h1>
+
+          <p class="hero-subtitle" data-reveal="fade-up" data-delay="200">
+            A more thoughtful way to discover books, manage borrowing, and connect with your campus library. Built for the everyday rhythm of campus life.
+          </p>
+
+          <div class="hero-cta-group" data-reveal="fade-up" data-delay="300">
+            <a href="#showcase" class="btn btn-primary btn-large">
+              <span>Discover Libby</span>
+              <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary btn-large">
+              <span>See How It Works</span>
+            </a>
+          </div>
+
+          <!-- Micro-Trust Banner -->
+          <div class="hero-trust-bar" data-reveal="fade-up" data-delay="400">
+            <div class="trust-metric-item">
+              <span class="trust-num">14 Days</span>
+              <span class="trust-lbl">Student Loan Window</span>
             </div>
-        </div>
-        <div class="hero-image" data-aos="fade-left">
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2000&auto=format&fit=crop" alt="Libby Hero" class="hero-img">
-        </div>
-    </header>
-
-    <section id="features" class="section-header">
-        <span class="section-label">Features</span>
-        <h2 class="section-title">Crafted for Connoisseurs.</h2>
-    </section>
-
-    <section class="features-grid">
-        <div class="feature-card" data-aos="fade-up">
-            <span class="icon">✨</span>
-            <h3>Glow Design System</h3>
-            <p>Experience our signature "Glow" interface—soft light, premium shadows, and focus-driven layouts that soothe your eyes.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-            <span class="icon">📑</span>
-            <h3>Editorial Layouts</h3>
-            <p>Books aren't just data points. We display your library with a bold, editorial aesthetic that respects the art of the cover.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-            <span class="icon">🔒</span>
-            <h3>Secure Governance</h3>
-            <p>Built-in user status monitoring and account verification ensure a secure environment for your digital assets.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up">
-            <span class="icon">📊</span>
-            <h3>Admin Mastery</h3>
-            <p>A powerful desktop command center to manage categories, users, and borrowing history with surgical precision.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-            <span class="icon">🔔</span>
-            <h3>Instant Resonance</h3>
-            <p>Real-time notifications keep you connected to your library's rhythm, from new arrivals to status updates.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-            <span class="icon">🌓</span>
-            <h3>Luminescent Flux</h3>
-            <p>A dark mode that feels alive. Deep slates and vibrant greens create a luminescent experience for night-time curation.</p>
-        </div>
-    </section>
-
-    <section id="philosophy" class="info-section">
-        <div class="info-content" data-aos="fade-right">
-            <span class="section-label">The Vision</span>
-            <h2>Books are not just files. They are legacies.</h2>
-            <p>We built Libby on the belief that a digital library should feel as permanent and premium as a physical one. Every interaction is designed to evoke the feeling of stepping into a private gallery.</p>
-            <div class="stat-group">
-                <div class="stat-item">
-                    <h4>60FPS</h4>
-                    <span>Fluid Interactivity</span>
-                </div>
-                <div class="stat-item">
-                    <h4>100%</h4>
-                    <span>Native Performance</span>
-                </div>
+            <div class="trust-metric-divider"></div>
+            <div class="trust-metric-item">
+              <span class="trust-num">Session-Aware</span>
+              <span class="trust-lbl">Fair Pickup Expiry</span>
             </div>
-        </div>
-        <div class="info-visual" data-aos="zoom-out">
-            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop" alt="Philosophy" class="info-img">
-        </div>
-    </section>
-
-    <section class="info-section reverse">
-        <div class="info-content" data-aos="fade-left">
-            <span class="section-label">Technology</span>
-            <h2>Cloud Power, Local Privacy.</h2>
-            <p>Powered by Supabase and Flutter, Libby offers industry-leading synchronization speeds while keeping your session management strictly professional with local encryption.</p>
-            <div class="stat-group">
-                <div class="stat-item">
-                    <h4>< 20ms</h4>
-                    <span>Sync Latency</span>
-                </div>
-                <div class="stat-item">
-                    <h4>256-bit</h4>
-                    <span>Session Security</span>
-                </div>
+            <div class="trust-metric-divider"></div>
+            <div class="trust-metric-item">
+              <span class="trust-num">Zero Friction</span>
+              <span class="trust-lbl">QR Accession & ID</span>
             </div>
+          </div>
         </div>
-        <div class="info-visual" data-aos="zoom-out">
-            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop" alt="Technology" class="info-img">
-        </div>
-    </section>
 
-    <section id="download" class="final-cta">
-        <div data-aos="zoom-in">
-            <h2 class="gradient-text">Join the Editorial Circle.</h2>
-            <p>Download the latest version of Libby for your device and transform your library today.</p>
-            <div id="download-container-footer" class="download-section center">
-                <!-- Selectively injected via JS -->
+        <!-- Hero Visual Composition: The Digital Library Meeting the Physical World -->
+        <div class="hero-visual" data-reveal="fade-left" data-delay="200">
+          <div class="hero-card-stack" id="hero-parallax-card">
+            
+            <!-- Floating ID Card (Interactive Front/Back Motif) -->
+            <div class="floating-mockup id-card-mockup" data-parallax="0.08">
+              <div class="id-card-header">
+                <div class="id-badge">STUDENT MEMBER</div>
+                <div class="id-brand">
+                  <span class="id-logo-dot"></span>
+                  <span class="id-logo-text">LIBBY</span>
+                </div>
+              </div>
+              <div class="id-card-body">
+                <div class="id-avatar-circle">MA</div>
+                <div class="id-member-info">
+                  <h4 class="id-name">Muhammed A.</h4>
+                  <p class="id-role-dept">Computer Science • Batch 2026</p>
+                  <p class="id-code">LIB-STU-0042</p>
+                </div>
+                <div class="id-qr-box">
+                  <div class="simulated-qr">
+                    <div class="qr-corner top-left"></div>
+                    <div class="qr-corner top-right"></div>
+                    <div class="qr-corner bottom-left"></div>
+                    <div class="qr-core-pattern"></div>
+                  </div>
+                  <span class="qr-label">CAMPUS ID</span>
+                </div>
+              </div>
+              <div class="id-card-footer">
+                <span class="id-status-badge active"><span class="badge-dot"></span> Active Borrower</span>
+                <span class="id-institution">Kamaliya Campus Central Library</span>
+              </div>
             </div>
+
+            <!-- Floating Loan & Due Date Activity Widget -->
+            <div class="floating-mockup loan-activity-mockup" data-parallax="0.15">
+              <div class="widget-header">
+                <span class="widget-icon book-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+                </span>
+                <div class="widget-title-wrap">
+                  <span class="widget-tag">ACTIVE LOAN</span>
+                  <h5 class="widget-book-title">Designing Data-Intensive Applications</h5>
+                </div>
+              </div>
+              <div class="widget-progress-row">
+                <div class="widget-due-info">
+                  <span class="due-label">Due in</span>
+                  <span class="due-days">6 Days</span>
+                </div>
+                <div class="progress-bar-track">
+                  <div class="progress-bar-fill" style="width: 58%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Reservation Ready Banner -->
+            <div class="floating-mockup reservation-ready-mockup" data-parallax="0.12">
+              <div class="res-ping-dot"></div>
+              <div class="res-content">
+                <span class="res-status-title">Reservation Ready for Pickup</span>
+                <span class="res-book-name">Artificial Intelligence: A Modern Approach</span>
+                <span class="res-timer">Held until today's session closing (4:30 PM)</span>
+              </div>
+            </div>
+
+            <!-- Background Abstract Page Layers -->
+            <div class="book-spine-backdrop spine-1"></div>
+            <div class="book-spine-backdrop spine-2"></div>
+            <div class="book-spine-backdrop spine-3"></div>
+
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Mobile Bottom Tab Bar -->
-    <nav class="mobile-tab-bar">
-        <a href="#hero" class="tab-item active">
-            <span class="tab-icon">🏠</span>
-            <span class="tab-label">Home</span>
-        </a>
-        <a href="#features" class="tab-item">
-            <span class="tab-icon">✨</span>
-            <span class="tab-label">Experience</span>
-        </a>
-        <a href="#philosophy" class="tab-item">
-            <span class="tab-icon">🏛️</span>
-            <span class="tab-label">Philosophy</span>
-        </a>
-        <a href="#download" class="tab-item">
-            <span class="tab-icon">⬇️</span>
-            <span class="tab-label">Download</span>
-        </a>
-    </nav>
-
-    <footer>
-        <div class="logo">LIBBY</div>
-        <p>Premium Library Management & Editorial Experience.</p>
-        <div class="footer-links">
-            <a href="privacy-policy/">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Support</a>
+    <!-- 2. PLATFORM OVERVIEW SECTION -->
+    <section class="overview-section" id="overview">
+      <div class="container">
+        <div class="section-heading text-center" data-reveal="fade-up">
+          <span class="section-kicker">HOW LIBBY HELPS YOUR CAMPUS</span>
+          <h2 class="section-title">A library that moves with you.</h2>
+          <p class="section-lead">
+            Libby connects physical bookshelves with everyday campus routines—giving students fast answers on their phones and giving librarians effortless tools at the desk.
+          </p>
         </div>
-        <p style="margin-top: 30px; opacity: 0.5; font-size: 0.8rem;">&copy; 2026 Libby Editorial Team. All rights reserved.</p>
-    </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
+        <div class="overview-grid">
+          <!-- Column 1 -->
+          <div class="overview-card" data-reveal="fade-up" data-delay="100">
+            <div class="card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.3-4.3"></path><circle cx="11" cy="11" r="8"></circle></svg>
+            </div>
+            <h3 class="overview-card-title">Live Book Availability</h3>
+            <p class="overview-card-desc">
+              Search any title from your phone or laptop. Instantly see whether a copy is ready on the shelf, currently borrowed by someone else, or waiting for pickup.
+            </p>
+            <div class="card-chip-row">
+              <span class="chip">Live shelf status</span>
+              <span class="chip">Shelf location</span>
+              <span class="chip">Quick search</span>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="overview-card highlight-card" data-reveal="fade-up" data-delay="200">
+            <div class="card-icon-box accent">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 7h.01"></path><path d="M17 7h.01"></path><path d="M7 17h.01"></path><path d="M17 17h.01"></path></svg>
+            </div>
+            <h3 class="overview-card-title">Digital Library Pass</h3>
+            <p class="overview-card-desc">
+              Never worry about leaving your plastic card behind. Every student and teacher carries an official digital ID with a clear QR code for instant scan-and-go borrowing.
+            </p>
+            <div class="card-chip-row">
+              <span class="chip">On your phone</span>
+              <span class="chip">Quick barcode scan</span>
+              <span class="chip">No lost cards</span>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="overview-card" data-reveal="fade-up" data-delay="300">
+            <div class="card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="overview-card-title">Fair Reservation Timers</h3>
+            <p class="overview-card-desc">
+              Hold timers only count down when the library is open. If you reserve a book before a weekend or holiday, your pickup window stays protected until doors reopen.
+            </p>
+            <div class="card-chip-row">
+              <span class="chip">Fair waiting line</span>
+              <span class="chip">Safe hold timers</span>
+              <span class="chip">Automatic alerts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DETAILED FEATURES SHOWCASE -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-heading" data-reveal="fade-up">
+          <span class="section-kicker">CURATED CAPABILITIES</span>
+          <h2 class="section-title">Designed for rigor. Built for clarity.</h2>
+          <p class="section-lead">Every interaction in Libby has been considered against the realities of high-volume academic lending.</p>
+        </div>
+
+        <div class="feature-layout-container">
+          
+          <!-- Feature Block A: Book Discovery & Live Availability -->
+          <div class="feature-row" data-reveal="fade-up">
+            <div class="feature-text-col">
+              <div class="feature-num">01</div>
+              <h3 class="feature-title">Clear Catalog & Live Availability</h3>
+              <p class="feature-description">
+                Students and teachers can search by book title, author, subject, or shelf code. Libby shows exactly which physical copies are on the shelf, currently borrowed, reserved for someone, or out for repair.
+              </p>
+              <ul class="feature-bullet-list">
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> Track individual copies of each book with ease</li>
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> Built-in borrowing allowances (2 books for students, flexible for faculty)</li>
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> One-tap reservations when every copy is currently borrowed</li>
+              </ul>
+            </div>
+            <div class="feature-visual-col">
+              <div class="feature-ui-window">
+                <div class="ui-window-bar">
+                  <div class="traffic-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                  <span class="ui-window-title">Book Search — Works on Mobile & Desktop</span>
+                </div>
+                <div class="catalog-preview-content">
+                  <div class="search-bar-simulated">
+                    <span class="search-sim-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                    </span>
+                    <span class="search-sim-text">Search by title, author, or category...</span>
+                  </div>
+                  <div class="book-mini-cards">
+                    <div class="mini-book-card">
+                      <div class="book-spine-thumb spine-emerald">
+                        <span class="spine-text">DATABASE SYSTEMS</span>
+                      </div>
+                      <div class="book-mini-meta">
+                        <span class="b-status available">2 AVAILABLE</span>
+                        <h6 class="b-title">Fundamentals of Database Systems</h6>
+                        <span class="b-author">Elmasri & Navathe</span>
+                      </div>
+                    </div>
+                    <div class="mini-book-card">
+                      <div class="book-spine-thumb spine-navy">
+                        <span class="spine-text">DATA INTENSIVE</span>
+                      </div>
+                      <div class="book-mini-meta">
+                        <span class="b-status reserved">RESERVED</span>
+                        <h6 class="b-title">Designing Data-Intensive Apps</h6>
+                        <span class="b-author">Martin Kleppmann</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Block B: Digital Library Identity & QR Accession -->
+          <div class="feature-row reverse" data-reveal="fade-up">
+            <div class="feature-text-col">
+              <div class="feature-num">02</div>
+              <h3 class="feature-title">Digital Library Cards on Your Phone</h3>
+              <p class="feature-description">
+                Every member gets an official library ID right on their smartphone. Librarians simply scan the on-screen QR code in seconds to check books in or out without touching paper slips.
+              </p>
+              <ul class="feature-bullet-list">
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> Instant verification with verified campus badges</li>
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> Secure dynamic card prevents sharing or forgery</li>
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> One-click printable PDF cards for physical issuance if needed</li>
+              </ul>
+            </div>
+            <div class="feature-visual-col">
+              <div class="digital-card-showcase-box">
+                <div class="card-flipper-container">
+                  <div class="card-side front-side">
+                    <div class="card-emblem-row">
+                      <span class="emblem-libby">LIBBY CARD</span>
+                      <span class="emblem-college">KAMALIYA CAMPUS</span>
+                    </div>
+                    <div class="card-chip-graphic"></div>
+                    <div class="card-bottom-row">
+                      <div>
+                        <div class="c-id-lbl">LIBRARY IDENTIFIER</div>
+                        <div class="c-id-val">LIB-FAC-0019</div>
+                        <div class="c-name-val">Prof. K. Senanayake</div>
+                      </div>
+                      <div class="c-qr-stamp">
+                        <div class="qr-stamp-pattern"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Block C: Administrative Command Center & Circulation -->
+          <div class="feature-row" data-reveal="fade-up">
+            <div class="feature-text-col">
+              <div class="feature-num">03</div>
+              <h3 class="feature-title">A Simple Desk Dashboard for Librarians</h3>
+              <p class="feature-description">
+                Designed to make busy circulation desks peaceful. Quick-issue books with standard barcode scanners, process returns with instant condition notes, and create graduation clearance slips in seconds.
+              </p>
+              <ul class="feature-bullet-list">
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> Scan any barcode label for immediate copy lookup</li>
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> Clear history logs show who issued or accepted every book</li>
+                <li><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> Instant graduation clearance confirms all books are safely returned</li>
+              </ul>
+              <div style="margin-top: 24px;">
+                <a href="admin-download/" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>Download Admin Desktop (.exe)</span>
+                </a>
+              </div>
+            </div>
+            <div class="feature-visual-col">
+              <div class="admin-desk-preview">
+                <div class="admin-panel-mockup">
+                  <div class="panel-header">
+                    <span class="badge-role admin">LIBRARIAN DESK</span>
+                    <span class="panel-timestamp">SYSTEM ONLINE</span>
+                  </div>
+                  <div class="panel-stats-grid">
+                    <div class="stat-cell">
+                      <span class="stat-n">1,420</span>
+                      <span class="stat-l">Books in Catalog</span>
+                    </div>
+                    <div class="stat-cell">
+                      <span class="stat-n">94.8%</span>
+                      <span class="stat-l">Returned on Time</span>
+                    </div>
+                    <div class="stat-cell">
+                      <span class="stat-n">12</span>
+                      <span class="stat-l">Ready for Pickup</span>
+                    </div>
+                  </div>
+                  <div class="circulation-action-row">
+                    <div class="btn-mock issue">
+                      <span class="btn-m-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                      </span> Quick Issue Book
+                    </div>
+                    <div class="btn-mock return">
+                      <span class="btn-m-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
+                      </span> Process Return
+                    </div>
+                    <div class="btn-mock session">
+                      <span class="btn-m-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                      </span> Library Hours
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SIGNATURE SCROLL-DRIVEN NARRATIVE -->
+    <section class="narrative-section" id="story">
+      <div class="container">
+        <div class="narrative-wrapper" data-reveal="fade-up">
+          <span class="section-kicker light">THE LIFE OF A BOOK</span>
+          <h2 class="narrative-headline">The library doesn't stand still.</h2>
+          <p class="narrative-intro">
+            From the moment a new physical volume is cataloged to the second it is safely checked back onto the shelf, Libby maintains absolute clarity.
+          </p>
+
+          <div class="narrative-track">
+            <!-- Step 1 -->
+            <div class="narrative-milestone" data-reveal="fade-up" data-delay="100">
+              <div class="milestone-badge">01</div>
+              <div class="milestone-card">
+                <div class="milestone-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+                </div>
+                <h4 class="milestone-title">Arrive & Catalog</h4>
+                <p class="milestone-text">A new book arrives. The librarian sticks a quick barcode on the back cover. It is immediately visible in the campus search.</p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="narrative-milestone" data-reveal="fade-up" data-delay="200">
+              <div class="milestone-badge">02</div>
+              <div class="milestone-card">
+                <div class="milestone-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+                </div>
+                <h4 class="milestone-title">Search & Reserve</h4>
+                <p class="milestone-text">A student searches from their phone, sees every copy is currently borrowed, and joins the fair reservation line with one click.</p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="narrative-milestone" data-reveal="fade-up" data-delay="300">
+              <div class="milestone-badge">03</div>
+              <div class="milestone-card">
+                <div class="milestone-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+                </div>
+                <h4 class="milestone-title">Return & Automatic Notice</h4>
+                <p class="milestone-text">As soon as the book is returned at the desk, Libby safely sets it aside and alerts the waiting student that their copy is ready.</p>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="narrative-milestone" data-reveal="fade-up" data-delay="400">
+              <div class="milestone-badge">04</div>
+              <div class="milestone-card">
+                <div class="milestone-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <h4 class="milestone-title">Easy Pickup</h4>
+                <p class="milestone-text">Hold timers only tick during library hours. The student presents their digital ID at the desk, collects the book, and starts reading.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SIGNATURE INTERACTIVE PRODUCT SHOWCASE -->
+    <section class="showcase-section" id="showcase">
+      <div class="container">
+        <div class="section-heading text-center" data-reveal="fade-up">
+          <span class="section-kicker">INTERACTIVE PRODUCT EXPERIENCE</span>
+          <h2 class="section-title">Explore Libby in action.</h2>
+          <p class="section-lead">Select an interface view below to explore simulated workflows across the student mobile app and administrator command desktop.</p>
+        </div>
+
+        <div class="showcase-container" data-reveal="fade-up" data-delay="100">
+          <!-- Tab Navigation Controls -->
+          <div class="showcase-tabs" role="tablist" aria-label="Product Showcase Tabs">
+            <button class="showcase-tab active" role="tab" aria-selected="true" data-tab="catalog" id="tab-catalog">
+              <span class="tab-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+              </span> Discover Books
+            </button>
+            <button class="showcase-tab" role="tab" aria-selected="false" data-tab="loans" id="tab-loans">
+              <span class="tab-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+              </span> My Library & Loans
+            </button>
+            <button class="showcase-tab" role="tab" aria-selected="false" data-tab="idcard" id="tab-idcard">
+              <span class="tab-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+              </span> Digital ID Card
+            </button>
+            <button class="showcase-tab" role="tab" aria-selected="false" data-tab="reservations" id="tab-reservations">
+              <span class="tab-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </span> Reservations & Queue
+            </button>
+            <button class="showcase-tab" role="tab" aria-selected="false" data-tab="admin" id="tab-admin">
+              <span class="tab-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </span> Administration
+            </button>
+          </div>
+
+          <!-- Interactive Viewport Content (Real Simulated CSS Components) -->
+          <div class="showcase-viewport">
+            
+            <!-- PANEL 1: CATALOG -->
+            <div class="showcase-panel active" id="panel-catalog" role="tabpanel" aria-labelledby="tab-catalog">
+              <div class="interactive-screen-frame">
+                <div class="screen-top-bar">
+                  <span class="screen-time">09:41</span>
+                  <span class="screen-title">Library Catalogue</span>
+                  <span class="screen-signal">●●● 5G</span>
+                </div>
+                <div class="screen-body-content">
+                  <div class="catalog-filters">
+                    <button class="cat-pill active" data-category="all">All Books</button>
+                    <button class="cat-pill" data-category="engineering">Engineering</button>
+                    <button class="cat-pill" data-category="computing">Computing</button>
+                    <button class="cat-pill" data-category="business">Business</button>
+                  </div>
+                  <div class="catalog-item-list" id="showcase-catalog-list">
+                    <div class="catalog-row-item" data-category="computing">
+                      <div class="item-cover cover-green"><span>CS</span></div>
+                      <div class="item-details">
+                        <span class="item-status-tag tag-avail">2 Copies on Shelf</span>
+                        <h4 class="item-title-text">Introduction to Algorithms (4th Edition)</h4>
+                        <span class="item-sub">Cormen, Leiserson, Rivest, Stein • Shelf 04-B</span>
+                      </div>
+                      <button class="action-btn-sm demo-details-btn" aria-label="View Details">Details</button>
+                    </div>
+                    <div class="catalog-row-item" data-category="computing">
+                      <div class="item-cover cover-navy"><span>AI</span></div>
+                      <div class="item-details">
+                        <span class="item-status-tag tag-borrowed">All Copies Issued (1 Waiting)</span>
+                        <h4 class="item-title-text">Artificial Intelligence: A Modern Approach</h4>
+                        <span class="item-sub">Stuart Russell & Peter Norvig • Shelf 02-A</span>
+                      </div>
+                      <button class="action-btn-sm reserve-btn demo-reserve-btn" aria-label="Reserve Book">Reserve</button>
+                    </div>
+                    <div class="catalog-row-item" data-category="engineering" style="display: none;">
+                      <div class="item-cover cover-green"><span>EE</span></div>
+                      <div class="item-details">
+                        <span class="item-status-tag tag-avail">3 Copies on Shelf</span>
+                        <h4 class="item-title-text">Signals and Systems (2nd Edition)</h4>
+                        <span class="item-sub">Oppenheim & Willsky • Shelf 01-C</span>
+                      </div>
+                      <button class="action-btn-sm demo-details-btn" aria-label="View Details">Details</button>
+                    </div>
+                    <div class="catalog-row-item" data-category="business" style="display: none;">
+                      <div class="item-cover cover-navy"><span>MG</span></div>
+                      <div class="item-details">
+                        <span class="item-status-tag tag-avail">1 Copy on Shelf</span>
+                        <h4 class="item-title-text">Principles of Modern Management</h4>
+                        <span class="item-sub">S. P. Robbins • Shelf 05-A</span>
+                      </div>
+                      <button class="action-btn-sm demo-details-btn" aria-label="View Details">Details</button>
+                    </div>
+                  </div>
+                  <div class="demo-feedback-toast" id="catalog-toast" style="display:none;"></div>
+                </div>
+                <div class="screen-caption-footer">
+                  <span class="sim-notice">DEMONSTRATION VIEW • Instant filter & click 'Reserve' to test live simulation.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 2: MY LOANS -->
+            <div class="showcase-panel" id="panel-loans" role="tabpanel" aria-labelledby="tab-loans">
+              <div class="interactive-screen-frame">
+                <div class="screen-top-bar">
+                  <span class="screen-time">09:41</span>
+                  <span class="screen-title">My Active Borrowing</span>
+                  <span class="screen-signal">●●● 5G</span>
+                </div>
+                <div class="screen-body-content">
+                  <div class="borrow-quota-banner">
+                    <div class="quota-text">
+                      <span class="quota-n" id="demo-quota-count">1 of 2</span>
+                      <span class="quota-l">Student Loan Limit Active</span>
+                    </div>
+                    <div class="quota-pill">Within Limits</div>
+                  </div>
+                  <div class="active-loan-card-rich">
+                    <div class="loan-card-top">
+                      <span class="loan-badge-due" id="demo-loan-badge">DUE IN 6 DAYS</span>
+                      <span class="loan-acc">ACC: CS-10492</span>
+                    </div>
+                    <h4 class="loan-title">Designing Data-Intensive Applications</h4>
+                    <p class="loan-author">Martin Kleppmann • Borrowed Oct 14, 2026</p>
+                    <div class="loan-due-row">
+                      <span>Due Date: <strong id="demo-due-date">Oct 28, 2026</strong></span>
+                      <button class="action-btn-sm demo-renew-btn" id="demo-renew-action">Renew Loan</button>
+                    </div>
+                  </div>
+                  <div class="demo-feedback-toast" id="loans-toast" style="display:none; margin-top:14px;"></div>
+                </div>
+                <div class="screen-caption-footer">
+                  <span class="sim-notice">DEMONSTRATION VIEW • Accurate due-date countdowns and borrowing history.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 3: DIGITAL ID -->
+            <div class="showcase-panel" id="panel-idcard" role="tabpanel" aria-labelledby="tab-idcard">
+              <div class="interactive-screen-frame">
+                <div class="screen-top-bar">
+                  <span class="screen-time">09:41</span>
+                  <span class="screen-title">Digital Library Pass</span>
+                  <span class="screen-signal">●●● 5G</span>
+                </div>
+                <div class="screen-body-content flex-center">
+                  <div class="digital-pass-card">
+                    <div class="pass-header">
+                      <span class="pass-univ">KAMALIYA CAMPUS CENTRAL LIBRARY</span>
+                      <span class="pass-role-badge">STUDENT</span>
+                    </div>
+                    <div class="pass-hero-qr">
+                      <div class="qr-render-box">
+                        <div class="qr-finder tl"></div>
+                        <div class="qr-finder tr"></div>
+                        <div class="qr-finder bl"></div>
+                        <div class="qr-code-grid"></div>
+                      </div>
+                      <span class="qr-sub-text">SCAN AT CIRCULATION DESK</span>
+                    </div>
+                    <div class="pass-meta">
+                      <span class="pass-id-number">LIB-STU-0042</span>
+                      <h4 class="pass-holder">Muhammed A.</h4>
+                      <p class="pass-dept">Department of Computer Science</p>
+                    </div>
+                    <div style="margin-top: 14px;">
+                      <button class="action-btn-sm" id="demo-flip-card-btn" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); color: #fff; cursor: pointer;">Rotate ID Pass</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-caption-footer">
+                  <span class="sim-notice">DEMONSTRATION VIEW • Click 'Rotate ID Pass' to test live interactive card rotation.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 4: RESERVATIONS -->
+            <div class="showcase-panel" id="panel-reservations" role="tabpanel" aria-labelledby="tab-reservations">
+              <div class="interactive-screen-frame">
+                <div class="screen-top-bar">
+                  <span class="screen-time">09:41</span>
+                  <span class="screen-title">Reservation Queue</span>
+                  <span class="screen-signal">●●● 5G</span>
+                </div>
+                <div class="screen-body-content">
+                  <div class="queue-card-active ready">
+                    <div class="queue-status-head">
+                      <span class="status-indicator ready"></span>
+                      <span class="status-name">READY FOR PICKUP</span>
+                      <span class="queue-position">Queue Position #1</span>
+                    </div>
+                    <h4 class="queue-title">Computer Networks (5th Edition)</h4>
+                    <p class="queue-author">Andrew S. Tanenbaum • Assigned Copy: CN-042</p>
+                    <div class="queue-session-callout">
+                      <span class="session-clock-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                      </span>
+                      <span id="demo-queue-timer-text">Reserved until current session closes (Today, 4:30 PM). Session-aware hold.</span>
+                    </div>
+                    <div style="margin-top: 16px; display: flex; gap: 10px;">
+                      <button class="action-btn-sm" id="demo-claim-btn" style="background: var(--color-primary-green); color: white; cursor: pointer;">Simulate Pickup</button>
+                      <button class="action-btn-sm" id="demo-cancel-res-btn" style="background: transparent; border: 1px solid var(--bg-dark-border-light); color: var(--text-muted); cursor: pointer;">Cancel Hold</button>
+                    </div>
+                  </div>
+                  <div class="demo-feedback-toast" id="res-toast" style="display:none; margin-top:14px;"></div>
+                </div>
+                <div class="screen-caption-footer">
+                  <span class="sim-notice">DEMONSTRATION VIEW • FIFO queues advance automatically when copies are returned.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 5: ADMINISTRATION -->
+            <div class="showcase-panel" id="panel-admin" role="tabpanel" aria-labelledby="tab-admin">
+              <div class="interactive-screen-frame desktop-aspect">
+                <div class="screen-top-bar admin-dark">
+                  <span class="screen-title">Libby Administrative Command — Kamaliya Campus</span>
+                  <span class="screen-status-green">● DATABASE HEALTHY</span>
+                </div>
+                <div class="screen-body-content admin-grid">
+                  <div class="admin-sidebar-sim">
+                    <span class="side-item active">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg> Circulation
+                    </span>
+                    <span class="side-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Members
+                    </span>
+                    <span class="side-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Sessions
+                    </span>
+                    <span class="side-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Audit Logs
+                    </span>
+                    <span class="side-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg> Clearance
+                    </span>
+                  </div>
+                  <div class="admin-main-sim">
+                    <div class="admin-quick-bar">
+                      <input type="text" class="admin-input-sim" id="demo-admin-input" value="Scan Accession: CS-10492">
+                      <button class="btn-admin-action" id="demo-admin-issue-btn">Issue to LIB-STU-0042</button>
+                    </div>
+                    <div class="admin-log-snippet" id="demo-admin-logs">
+                      <div class="log-row"><span class="log-time">09:38:12</span> <span class="log-act">RETURN_BOOK</span> Copy CS-882 returned by LIB-STU-0012. Copy marked AVAILABLE.</div>
+                      <div class="log-row"><span class="log-time">09:35:04</span> <span class="log-act">ISSUE_BOOK</span> Copy MT-041 issued to LIB-FAC-0019 by Admin.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-caption-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                  <span class="sim-notice">DEMONSTRATION VIEW • Enter accession or click 'Issue to LIB-STU-0042' to append live immutable audit logs.</span>
+                  <a href="admin-download/" class="btn btn-outline" style="font-size: 0.78rem; padding: 6px 14px; border-radius: 4px; text-decoration: none;">Download Desktop App (.exe) &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. HOW IT WORKS SECTION -->
+    <section class="how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading text-center" data-reveal="fade-up">
+          <span class="section-kicker">WORKFLOW EXCELLENCE</span>
+          <h2 class="section-title">From bookshelf to your screen.</h2>
+          <p class="section-lead">A straightforward three-step model designed to minimize administrative friction and maximize study time.</p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card" data-reveal="fade-up" data-delay="100">
+            <div class="step-badge">01</div>
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            </div>
+            <h3 class="step-title">Discover</h3>
+            <p class="step-text">
+              Explore the library catalog from any phone, laptop, or campus workstation. Check book locations, shelf tags, and current copy availability in real-time.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card" data-reveal="fade-up" data-delay="200">
+            <div class="step-badge">02</div>
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="step-title">Connect</h3>
+            <p class="step-text">
+              Sign in using the authenticated institutional credentials provided by your campus library administrator. No public registration; accounts are strictly protected.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card" data-reveal="fade-up" data-delay="300">
+            <div class="step-badge">03</div>
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3 class="step-title">Manage</h3>
+            <p class="step-text">
+              Access your digital ID card, follow active loan due dates, receive session-aware hold reminders, and resolve graduation clearances effortlessly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. DESIGNED FOR EVERY PART OF CAMPUS -->
+    <section class="campus-section" id="campus">
+      <div class="container">
+        <div class="section-heading text-center" data-reveal="fade-up">
+          <span class="section-kicker">ROLE-BASED VALUE</span>
+          <h2 class="section-title">Designed for every part of campus.</h2>
+          <p class="section-lead">Tailored interfaces and explicit rules for students, faculty members, and institutional library officers.</p>
+        </div>
+
+        <div class="audience-grid">
+          <!-- Students -->
+          <div class="audience-card" data-reveal="fade-up" data-delay="100">
+            <div class="audience-header">
+              <span class="aud-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </span>
+              <span class="aud-tag">STUDENTS</span>
+            </div>
+            <h3 class="aud-title">“Your library, without the extra friction.”</h3>
+            <p class="aud-desc">
+              Check your 14-day borrowing time, reserve popular textbooks when every copy is out, and show your digital ID on your phone. No more misplaced paper cards or surprise due dates.
+            </p>
+            <div class="aud-perks">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> 2-Book Student Loan Limit</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Digital QR Library Pass</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Safe Weekend Hold Timers</span>
+            </div>
+          </div>
+
+          <!-- Faculty -->
+          <div class="audience-card" data-reveal="fade-up" data-delay="200">
+            <div class="audience-header">
+              <span class="aud-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="m9 9 2 2 4-4"></path></svg>
+              </span>
+              <span class="aud-tag">FACULTY</span>
+            </div>
+            <h3 class="aud-title">“More room for research and teaching.”</h3>
+            <p class="aud-desc">
+              Academic research needs freedom. Teachers and researchers have generous borrowing allowances, simple renewals, and immediate visibility over department course texts.
+            </p>
+            <div class="aud-perks">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Flexible Faculty Borrowing</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Easy Academic Renewals</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Complete Campus Collection</span>
+            </div>
+          </div>
+
+          <!-- Library Administrators -->
+          <div class="audience-card highlight" data-reveal="fade-up" data-delay="300">
+            <div class="audience-header">
+              <span class="aud-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </span>
+              <span class="aud-tag">LIBRARIANS</span>
+            </div>
+            <h3 class="aud-title">“Clear operations. Peace of mind.”</h3>
+            <p class="aud-desc">
+              Scan barcodes in one second, keep track of who borrowed what, set library hours, and print official graduation clearance slips with total confidence.
+            </p>
+            <div class="aud-perks">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Works With Barcode Scanners</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Automatic Activity Logs</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Printable Graduation Clearance PDF</span>
+            </div>
+            <div style="margin-top: 18px;">
+              <a href="admin-download/" class="btn btn-outline" style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 10px 16px;">
+                Download Desktop Management App (.exe) &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. TRUST, PRIVACY & INSTITUTIONAL CONTROL -->
+    <section class="trust-section" id="trust">
+      <div class="container">
+        <div class="trust-inner-box" data-reveal="fade-up">
+          <div class="trust-badge-row">
+            <span class="trust-pill">INSTITUTIONAL INTEGRITY</span>
+          </div>
+          <h2 class="trust-title">Security and governance built into every layer.</h2>
+          <p class="trust-desc">
+            Libby respects the institutional custody of academic records. Access to library information is role-controlled, database operations are strictly audited, and member accounts are provisioned exclusively by authorized librarians.
+          </p>
+
+          <div class="trust-points-grid">
+            <div class="trust-point">
+              <span class="point-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </span>
+              <h4>Protected Campus Accounts</h4>
+              <p>No open public signups. Member accounts are created and verified directly by campus librarians to keep data safe.</p>
+            </div>
+            <div class="trust-point">
+              <span class="point-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </span>
+              <h4>Strict Data Privacy</h4>
+              <p>Borrowing history is private to each member. Students only see their own loans, protected by strict database-level security rules.</p>
+            </div>
+            <div class="trust-point">
+              <span class="point-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+              </span>
+              <h4>Clear Activity Records</h4>
+              <p>Every book issued, returned, or renewed is permanently recorded, giving library staff complete operational clarity.</p>
+            </div>
+            <div class="trust-point">
+              <span class="point-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect></svg>
+              </span>
+              <h4>Transparent Guidelines</h4>
+              <p>Policies reflect real institutional standards. Privacy practices and terms of service are published openly for all members.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading text-center" data-reveal="fade-up">
+          <span class="section-kicker">QUESTIONS & ANSWERS</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-lead">Everything you need to know about Libby's platform, access rules, and campus workflows.</p>
+        </div>
+
+        <div class="faq-accordion" data-reveal="fade-up" data-delay="100">
+          
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is Libby?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Libby is a clean, modern digital library platform built for colleges and campuses. It lets students search books in real-time, carry a digital library pass on their phones, and reserve books safely, while giving librarians simple tools to manage lending at the front desk.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Who can use Libby?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Libby is used by enrolled students, teachers, and authorized library staff at partner institutions, starting with Kamaliya Campus Central Library.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I create my own account online?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. To protect campus book collections and verify enrollments, accounts cannot be created publicly online. Your campus librarian sets up and activates your account directly.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do book reservations and pickup timers work?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>When all copies of a book are currently checked out, you can tap 'Reserve' to join the waiting list. When a copy is returned, the next person in line is notified. Pickup timers only count down during hours when the library is actually open, so weekends and holidays will never expire your hold.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the borrowing limit for students?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Students can borrow up to 2 books at the same time for 14 days. Teachers and academic researchers have flexible limits to support teaching and research needs.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I get similar software built for my own college or organization?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. If you need a library management platform, a student operations portal, or custom software for your organization, reach out directly at <a href="mailto:msinankavala786@gmail.com?subject=Software%20Development%20Enquiry%20%E2%80%94%20Libby%20Website" style="color: var(--color-mint); text-decoration: underline;">msinankavala786@gmail.com</a>. We would love to discuss your requirements and build a tailored solution.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CLOSING CALL TO ACTION & CUSTOM ENGINEERING ENQUIRY -->
+    <section class="cta-closing-section" id="custom-software">
+      <div class="container">
+        <div class="cta-card-box" data-reveal="fade-up">
+          <div class="cta-content-wrap">
+            <span class="cta-pill">CUSTOM ENGINEERING & SOLUTIONS</span>
+            <h2 class="cta-headline">Need software like this for your organization?</h2>
+            <p class="cta-subtext">
+              Looking for a modern library management system, an internal operations platform, or custom web & mobile software for your college, institution, or business? Tell us what you need, and let's discuss how we can build it for you.
+            </p>
+            <div class="cta-btn-group">
+              <a href="mailto:msinankavala786@gmail.com?subject=Software%20Development%20Enquiry%20%E2%80%94%20Libby%20Website&body=Hi%20Sinan%2C%0A%0AI%20visited%20the%20Libby%20website%20and%20would%20like%20to%20discuss%20building%20software%20for%20our%20organization.%0A%0A%E2%80%A2%20Name%3A%20%0A%E2%80%A2%20Organization%20%2F%20Institution%3A%20%0A%E2%80%A2%20Type%20of%20software%20needed%3A%20%0A%E2%80%A2%20Key%20requirements%20or%20timeline%3A%20%0A%E2%80%A2%20Preferred%20way%20to%20continue%20discussion%20(Email%2FPhone%2FMeeting)%3A%20%0A%0AThank%20you!" class="btn btn-primary btn-large">
+                <span>Discuss Your Project</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+              <a href="mailto:msinankavala786@gmail.com?subject=Software%20Development%20Enquiry%20%E2%80%94%20Libby%20Website" class="btn btn-secondary btn-large">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                <span>msinankavala786@gmail.com</span>
+              </a>
+            </div>
+            <p style="font-size: 0.82rem; color: rgba(245, 243, 235, 0.7); margin-top: 24px; line-height: 1.5;">
+              * Clicking opens your default email client with an organized enquiry draft. We respond promptly.
+            </p>
+          </div>
+          <div class="cta-graphic-pattern">
+            <div class="pattern-ring ring-1"></div>
+            <div class="pattern-ring ring-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 12. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <!-- Brand Summary -->
+        <div class="footer-brand-col">
+          <div class="brand-link footer-brand">
+            <div class="brand-icon-wrap" style="width: 36px; height: 36px;">
+              <img src="assets/libby_logo.png" alt="Libby" width="24" height="24" class="brand-logo">
+            </div>
+            <span class="brand-name">LIBBY</span>
+          </div>
+          <p class="footer-brand-desc">
+            A modern digital library management platform for college libraries. Designed to bring physical collections and campus study into seamless harmony.
+          </p>
+          <div class="footer-powered-badge">
+            <span class="powered-label">POWERED BY</span>
+            <span class="powered-company">ETRIQ</span>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-links-col">
+          <h5 class="footer-heading">Platform</h5>
+          <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#features">Key Features</a></li>
+            <li><a href="#showcase">Product Preview</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#custom-software">Build Software With Us</a></li>
+            <li><a href="admin-download/">Admin Desktop Suite (.exe)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h5 class="footer-heading">Campus Community</h5>
+          <ul>
+            <li><a href="#campus">For Students</a></li>
+            <li><a href="#campus">For Faculty</a></li>
+            <li><a href="#campus">For Librarians</a></li>
+            <li><a href="#trust">Governance & Trust</a></li>
+            <li><a href="mailto:msinankavala786@gmail.com?subject=Software%20Development%20Enquiry%20%E2%80%94%20Libby%20Website">Developer Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h5 class="footer-heading">Legal & Compliance</h5>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="account-deletion.html">Account Deletion</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          &copy; 2026 Libby • Developed for Kamaliya Campus Central Library by Etriq. All rights reserved.
+        </p>
+        <div class="footer-compliance-text">
+          <span>Enterprise Campus Edition</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

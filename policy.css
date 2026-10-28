@@ -22,8 +22,9 @@
   --color-amber-text: #92400E;
 
   /* Typography */
-  --font-editorial: "Newsreader", "Playfair Display", Georgia, serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-editorial: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   
   /* Layout */
   --max-width-content: 840px;
@@ -640,6 +641,28 @@ h3.subheading {
   text-decoration: none;
 }
 
+/* Document Content Main Container */
+.policy-main {
+  background: var(--color-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 16px;
+  padding: 44px 48px;
+  box-shadow: 0 4px 24px rgba(36, 44, 40, 0.04);
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 980px) {
   .layout-grid {
@@ -651,12 +674,14 @@ h3.subheading {
     position: static;
     order: -1;
     margin-bottom: 16px;
+    top: auto;
   }
 
   .toc-list {
     max-height: 240px;
   }
 
+  .policy-main,
   .policy-article {
     padding: 32px 24px;
   }
@@ -671,30 +696,65 @@ h3.subheading {
     padding: 12px 16px;
   }
 
-  .page-wrapper {
-    padding: 28px 16px 64px;
+  .header-nav {
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+
+  .page-wrapper {
+    padding: 24px 14px 60px;
+  }
+
+  .policy-main,
   .policy-article {
-    padding: 24px 18px;
+    padding: 24px 16px;
     border-radius: 12px;
   }
 
   h1.policy-title {
     font-size: 1.85rem;
+    line-height: 1.2;
   }
 
   .hero-lead {
     font-size: 1.05rem;
   }
 
+  .policy-section h2,
   h2.section-heading {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .policy-section h3,
+  h3.subheading {
+    font-size: 1.1rem;
   }
 
   .policy-dates {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .data-table-wrapper {
+    margin: 16px -8px;
+    border-radius: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .callout {
+    padding: 14px 16px;
   }
 
   .footer-top {
@@ -704,5 +764,26 @@ h3.subheading {
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-wrapper {
+    padding: 20px 10px 48px;
+  }
+
+  .policy-main,
+  .policy-article {
+    padding: 20px 12px;
+  }
+
+  h1.policy-title {
+    font-size: 1.65rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
   }
 }

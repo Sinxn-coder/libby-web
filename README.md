@@ -1,8 +1,8 @@
-# Libby Marketing & Legal Website
+# Liblet Marketing & Legal Website
 
-Production-ready, zero-dependency static website for **Libby** (Kamaliya Campus Central Library system), developed by **Etriq**.
+Production-ready, zero-dependency static website for **Liblet** (Kamaliya Campus Central Library system), developed by **Etriq**.
 
-This repository serves as the deployment source for Cloudflare Pages at `https://libby.etriq.online` and provides:
+This repository serves as the deployment source for Cloudflare Pages at `https://liblet.etriq.online` and provides:
 - The main marketing, features, and platform showcase homepage
 - Official administrative desktop software distribution (`/admin-download/`)
 - Institutional Privacy Policy (`/privacy-policy/`)
@@ -17,7 +17,7 @@ The repository root is the deployable root for Cloudflare Pages:
 
 ```text
 .
-├── index.html                    # Main Libby landing & interactive showcase page
+├── index.html                    # Main Liblet landing & interactive showcase page
 ├── style.css                     # Primary styles and visual design tokens
 ├── script.js                     # Showcase interactions, dynamic demos & animations
 ├── policy.css                    # Scoped typography and styling for legal pages
@@ -43,9 +43,9 @@ The repository root is the deployable root for Cloudflare Pages:
 │   ├── maintanence.webp
 │   └── windows_icon.PNG
 ├── downloads/
-│   ├── Libby_Admin_Setup_v1.5.0.exe  # Windows release installer (18.35 MB)
-│   ├── Libby.apk                     # Android application package
-│   └── Libby_Windows.zip             # Portable Windows package
+│   ├── Liblet_Admin_Setup_v1.5.0.exe  # Windows release installer (18.35 MB)
+│   ├── Liblet.apk                     # Android application package
+│   └── Liblet_Windows.zip             # Portable Windows package
 ├── CLOUDFLARE_PAGES_SETUP.md     # Step-by-step Cloudflare Pages setup guide
 └── README.md                     # Repository documentation
 ```
@@ -93,4 +93,4 @@ This repository is optimized for zero-configuration, zero-build deployment:
 - **Build Command:** *(Leave empty)*
 - **Build Output Directory:** `/` (or root `.`)
 - **Production Branch:** `main`
-- **Custom Domain:** `libby.etriq.online`
+- **Custom Domain:** `liblet.etriq.online`

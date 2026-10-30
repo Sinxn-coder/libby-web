@@ -1,4 +1,4 @@
-# Libby Marketing & Legal Pages — Cloudflare Pages Setup
+# Liblet Marketing & Legal Pages — Cloudflare Pages Setup
 
 This directory (`hostweb/`) is a standalone, lightweight, zero-dependency static website containing:
 - Landing & download portal (`index.html`)

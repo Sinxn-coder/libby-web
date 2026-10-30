@@ -43,7 +43,8 @@ The repository root is the deployable root for Cloudflare Pages:
 │   ├── maintanence.webp
 │   └── windows_icon.PNG
 ├── downloads/
-│   ├── Liblet_Admin_Setup_v1.5.0.exe  # Windows release installer (18.35 MB)
+│   ├── Liblet_Admin_Setup_v1.5.1.exe  # Windows release installer (20.52 MB)
+│   ├── Liblet_Admin_Setup_v1.5.0.exe  # Previous release installer (18.84 MB)
 │   ├── Liblet.apk                     # Android application package
 │   └── Liblet_Windows.zip             # Portable Windows package
 ├── CLOUDFLARE_PAGES_SETUP.md     # Step-by-step Cloudflare Pages setup guide

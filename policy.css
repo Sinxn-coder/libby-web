@@ -823,12 +823,46 @@ h3.subheading {
 @media (max-width: 640px) {
   .header-container {
     position: relative;
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .brand-group {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-text-block {
+    min-width: 0;
+  }
+
+  .brand-title,
+  .brand-subtitle {
+    white-space: nowrap;
+  }
+
+  .brand-title {
+    font-size: clamp(1.05rem, 5vw, 1.35rem);
+  }
+
+  .brand-subtitle {
+    font-size: 0.62rem;
   }
 
   .mobile-menu-toggle {
     display: inline-flex;
-    flex: 0 0 auto;
+    flex: 0 0 42px;
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    margin-left: auto;
+    position: relative;
+    z-index: 120;
+    visibility: visible;
+    opacity: 1;
   }
 
   .header-nav {
